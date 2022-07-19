@@ -28,7 +28,9 @@ if uploaded_file is not None:
 
 Tools = st.selectbox("Choose your Tool", ['Euclidean','braycurtis','canberra','chebyshev']) 
 
-dfnext25=input.drop(columns=df.columns[0], axis=1, inplace=True)
+dfnext25 = input.iloc[: , 1:]
+
+#dfnext25=input.drop(columns=df.columns[0], axis=1, inplace=True)
 
 if Tools == "Euclidean":
   #euclidean
